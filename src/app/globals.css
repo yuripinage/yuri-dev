@@ -12,12 +12,12 @@
   --font-w95fa: var(--font-w95fa), sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #46006B;
     --foreground: #EBFFFF;
   }
-}
+} */
 
 body {
   background: var(--background);
@@ -56,6 +56,10 @@ a:hover {
   letter-spacing: var(--tracking-widest);
   font-weight: var(--font-weight-bold);
   line-height: var(--leading-tight);
+}
+
+svg {
+  fill: var(--foreground)
 }
 
 /* smooth infinite marquee */

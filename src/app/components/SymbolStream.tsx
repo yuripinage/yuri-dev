@@ -20,23 +20,23 @@ export function SymbolStream({
 				className={`flex w-[200%] h-full ${animationClass} motion-safe:animate-marquee`}
 			>
 				{/* track A */}
-				<div className="flex h-full w-1/2 shrink-0 items-center gap-0 text-background">
+				<div className="flex h-full w-1/2 shrink-0 items-center">
 					{symbols.map((_, index) => (
 						<Symbol
 							key={`a-${index}`}
 							reversed={inverted}
-							className="h-full w-auto fill-[#46006B]"
+							className="h-full w-auto"
 						/>
 					))}
 				</div>
 
 				{/* track B */}
-				<div className="flex w-1/2 shrink-0 items-center gap-0">
+				<div className="flex w-1/2 shrink-0 items-center">
 					{symbols.map((_, index) => (
 						<Symbol
 							key={`b-${index}`}
 							reversed={inverted}
-							className="h-full w-auto fill-[#46006B]"
+							className="h-full w-auto"
 						/>
 					))}
 				</div>
