@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --background: #EBFFFF;
+  --background: #F4FDFD;
   --foreground: #46006B;
 }
 
@@ -48,4 +48,15 @@ a:hover {
   letter-spacing: var(--tracking-widest);
   font-weight: var(--font-weight-bold);
   line-height: var(--leading-tight);
+}
+
+/* smooth infinite marquee */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); } /* move metade porque duplicamos o conteúdo */
+}
+
+/* acessibilidade */
+@media (prefers-reduced-motion: reduce) {
+  .motion-safe\:animate-marquee { animation: none !important; }
 }
