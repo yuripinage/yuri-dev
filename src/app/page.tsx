@@ -7,17 +7,17 @@ export default function Home() {
 			<main>
 				<div className="w-full">
 					<div className="flex flex-col gap-2">
-						<h1>{`Hello, I'm Yuri. ☕️`}</h1>
+						<h1>
+							<span>{`Hello, I'm Yuri. ☕️`}</span>
+						</h1>
 						<p>
-							I&apos;m a{' '}
-							<span className="font-[w95fa] tracking-widest font-bold leading-tight">
-								Frontend, Mobile and Product Engineer
-							</span>{' '}
-							with 10 years of experience.
+							{`I'm a `}
+							<span>Frontend, Mobile and Product Engineer</span>
+							{` with 10 years of experience.`}
 						</p>
 						<p>
-							Main technologies include NextJS, React Native and
-							Typescript.
+							Main technologies include{' '}
+							<span>NextJs, React Native and TypeScript</span>.
 						</p>
 						<p>
 							Currently serving as Software Engineer at{' '}

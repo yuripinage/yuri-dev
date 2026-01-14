@@ -25,7 +25,7 @@ export function SymbolStream({
 						<Symbol
 							key={`a-${index}`}
 							reversed={inverted}
-							className="h-full w-auto"
+							className="h-full w-auto fill-[#46006B]"
 						/>
 					))}
 				</div>
@@ -36,7 +36,7 @@ export function SymbolStream({
 						<Symbol
 							key={`b-${index}`}
 							reversed={inverted}
-							className="h-full w-auto"
+							className="h-full w-auto fill-[#46006B]"
 						/>
 					))}
 				</div>
