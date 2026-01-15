@@ -10,14 +10,19 @@ export function SymbolStream({
 	inverted?: boolean;
 }) {
 	const symbols = Array.from({ length: SYMBOL_COUNT });
+
 	const animationClass = inverted
 		? 'animate-[marquee_60s_linear_infinite_reverse]'
 		: 'animate-[marquee_60s_linear_infinite]';
 
+	const positionClass = inverted ? 'bottom-0' : 'top-0';
+
 	return (
-		<div className={`group w-full h-10 overflow-hidden ${className}`}>
+		<div
+			className={`bg-background group fixed left-0 right-0  w-full h-10 overflow-hidden ${positionClass} ${className}`}
+		>
 			<div
-				className={`flex w-[200%] h-full ${animationClass} motion-safe:animate-marquee`}
+				className={`flex w-[200%] h-full  motion-safe:animate-marquee ${animationClass}`}
 			>
 				{/* track A */}
 				<div className="flex h-full w-1/2 shrink-0 items-center">
