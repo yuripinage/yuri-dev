@@ -25,7 +25,7 @@ const EXPERIENCES = [
 		timeAndPlace: 'Porto | 2020 - 2021',
 		role: 'Software Engineer | Frontend | Mobile',
 		description:
-			'Drove web checkout optimization through experimentation and A/B testing and served as the dedicated mobile engineer, implementing localization tooling and prototypng speech-to-text-features.',
+			'Led checkout optimization through A/B experimentation and served as the dedicated mobile engineer, implementing localization tooling and prototypng speech-to-text features.',
 	},
 	{
 		company: 'Index',
@@ -33,6 +33,18 @@ const EXPERIENCES = [
 		role: 'Software Engineer | Frontend | Mobile',
 		description:
 			'Owned frontend and mobile feature delivery across client projects, including real-time delivery tracking experiences and OCR integrations.',
+	},
+	{
+		company: 'Fan Studios',
+		timeAndPlace: 'Fortaleza | 2016 - 2028',
+		role: 'Game Developer | Frontend Developer',
+		description: 'TODO',
+	},
+	{
+		company: 'Trainer Workout',
+		timeAndPlace: 'Montreal | 2015',
+		role: 'Android Developer Intern',
+		description: 'TODO',
 	},
 ];
 
@@ -60,13 +72,15 @@ function ExperienceItem({
 	timeAndPlace,
 }: ExperienceItemProps) {
 	return (
-		<div className="p-2 w-full flex flex-col gap-2 border-2 border-dashed border-foreground rounded-lg">
-			<div className="w-full flex justify-between items-center">
-				<h2>{company}</h2>
+		<div className="p-2 w-full flex flex-col gap-1 md:gap-2 border-2 border-dashed border-foreground rounded-lg">
+			<div className="w-full flex flex-col justify-between md:gap-2 md:items-center md:flex-row">
+				<h2>
+					<a>{company}</a>
+				</h2>
 				<p>{timeAndPlace}</p>
 			</div>
-			<span>{role}</span>
-			{description}
+			<span className="mb-1 md:mb-0">{role}</span>
+			<p>{description}</p>
 		</div>
 	);
 }
