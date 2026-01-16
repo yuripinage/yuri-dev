@@ -38,13 +38,15 @@ const EXPERIENCES = [
 		company: 'Fan Studios',
 		timeAndPlace: 'Fortaleza | 2016 - 2028',
 		role: 'Game Developer | Frontend Developer',
-		description: 'TODO',
+		description:
+			'Indie mobile game development with Unity 3D and frontend for different clients.',
 	},
 	{
 		company: 'Trainer Workout',
 		timeAndPlace: 'Montreal | 2015',
 		role: 'Android Developer Intern',
-		description: 'TODO',
+		description:
+			'Contributed to the development of key mobile features for the Trainer Workout native Android app.',
 	},
 ];
 
@@ -77,8 +79,9 @@ function ExperienceItem({
 				<h2>
 					<a>{company}</a>
 				</h2>
-				<p>{timeAndPlace}</p>
+				<p className="hidden md:flex">{timeAndPlace}</p>
 			</div>
+			<span className="md:hidden">{timeAndPlace}</span>
 			<span className="mb-1 md:mb-0">{role}</span>
 			<p>{description}</p>
 		</div>
