@@ -1,9 +1,4 @@
-type ExperienceItemProps = {
-	company: string;
-	role: string;
-	description: string;
-	timeAndPlace: string;
-};
+import { ExperienceItem } from './ExperienceItem';
 
 const EXPERIENCES = [
 	{
@@ -12,6 +7,7 @@ const EXPERIENCES = [
 		role: 'Senior Software Engineer | Full-stack',
 		description:
 			'Owning the full development lifecycle across frontend, backend and infrastructure in multiple projects, including a wealth and portfolio management platform and various other internal tools.',
+		url: 'https://contrary.com/',
 	},
 	{
 		company: 'Kyte',
@@ -19,6 +15,7 @@ const EXPERIENCES = [
 		role: 'Senior Software Engineer | Frontend | Mobile',
 		description:
 			'Led frontend and mobile development for high-impact booking flows, improving checkout conversion and shipping key trip-management features for a delivery-first car rental product.',
+		url: 'https://www.linkedin.com/company/drivekyte/',
 	},
 	{
 		company: 'Barkyn',
@@ -26,6 +23,7 @@ const EXPERIENCES = [
 		role: 'Software Engineer | Frontend | Mobile',
 		description:
 			'Led checkout optimization through A/B experimentation and served as the dedicated mobile engineer, implementing localization tooling and prototypng speech-to-text features.',
+		url: 'https://barkyn.com/',
 	},
 	{
 		company: 'Index',
@@ -33,6 +31,7 @@ const EXPERIENCES = [
 		role: 'Software Engineer | Frontend | Mobile',
 		description:
 			'Owned frontend and mobile feature delivery across client projects, including real-time delivery tracking experiences and OCR integrations.',
+		url: 'https://idx.digital/',
 	},
 	{
 		company: 'Fan Studios',
@@ -45,8 +44,7 @@ const EXPERIENCES = [
 		company: 'Trainer Workout',
 		timeAndPlace: 'Montreal | 2015',
 		role: 'Android Developer Intern',
-		description:
-			'Contributed to the development of key mobile features for the Trainer Workout native Android app.',
+		description: `Contributed to the development of mobile features for the startup's native Android app.`,
 	},
 ];
 
@@ -57,33 +55,13 @@ export function Experience() {
 			{EXPERIENCES.map((exp, index) => (
 				<ExperienceItem
 					key={`exp-${index}`}
-					company={exp.company}
-					role={exp.role}
-					description={exp.description}
+					title={exp.company}
+					subtitle={exp.role}
 					timeAndPlace={exp.timeAndPlace}
+					description={exp.description}
+					url={exp.url}
 				/>
 			))}
 		</section>
-	);
-}
-
-function ExperienceItem({
-	company,
-	role,
-	description,
-	timeAndPlace,
-}: ExperienceItemProps) {
-	return (
-		<div className="p-2 w-full flex flex-col gap-1 md:gap-2 border-2 border-dashed border-foreground rounded-lg">
-			<div className="w-full flex flex-col justify-between md:gap-2 md:items-center md:flex-row">
-				<h2>
-					<a>{company}</a>
-				</h2>
-				<span className="hidden md:flex">{timeAndPlace}</span>
-			</div>
-			<span className="md:hidden">{timeAndPlace}</span>
-			<span className="mb-1 md:mb-0">{role}</span>
-			<p>{description}</p>
-		</div>
 	);
 }
