@@ -50,7 +50,7 @@ const EXPERIENCES = [
 	},
 ];
 
-export default function Experience() {
+export function Experience() {
 	return (
 		<section className="flex flex-col gap-4">
 			<h1>Experience</h1>
@@ -79,7 +79,7 @@ function ExperienceItem({
 				<h2>
 					<a>{company}</a>
 				</h2>
-				<p className="hidden md:flex">{timeAndPlace}</p>
+				<span className="hidden md:flex">{timeAndPlace}</span>
 			</div>
 			<span className="md:hidden">{timeAndPlace}</span>
 			<span className="mb-1 md:mb-0">{role}</span>

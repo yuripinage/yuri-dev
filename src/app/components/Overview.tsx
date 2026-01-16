@@ -1,7 +1,7 @@
 import { GitHubIcon } from './GitHubIcon';
 import { LinkedinIcon } from './LinkedinIcon';
 
-export default function Overview() {
+export function Overview() {
 	return (
 		<section>
 			<h1 className="mb-4">{`Hello, I'm Yuri. ☕️`}</h1>
